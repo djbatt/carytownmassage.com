@@ -1,15 +1,12 @@
+import Header from "../components/header";
+
 export default function Home() {
+  
   return (
     <>
-      <header>
-
-      </header>
-      <main>
-
-      </main>
-      <footer>
-
-      </footer>
+      <Header />
+      <main style={{backgroundColor: "grey"}}></main>
+      <footer></footer>
     </>
-  )
+  );
 }

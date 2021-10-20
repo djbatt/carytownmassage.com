@@ -20,6 +20,7 @@ body {
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
   background-color: theme.$background-color;
+  color: theme.$text-color;
   font-family: theme.$body-font;
   @include rfs.font-size(16px);
 }

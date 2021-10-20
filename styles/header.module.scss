@@ -1,0 +1,72 @@
+@use "theme.scss" as theme;
+@use "../node_modules/rfs/scss.scss" as rfs;
+
+.header {
+  @include rfs.padding-left(40px);
+  @include rfs.padding-right(40px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: theme.$background-color;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  max-width: 200px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+
+  & > li {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: fit-content;
+    height: fit-content;
+
+    & > a {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .booking {
+      background-color: theme.$primary-color;
+      color: theme.$background-color;
+      border: 1px solid rgba(0, 0, 0, 0);
+      padding: 10px 12px;
+      border-radius: 7px;
+      transition: ease 0.2s;
+
+      &:hover {
+        background-color: theme.$background-color;
+        color: theme.$primary-color;
+        border: 1px solid theme.$primary-color;
+      }
+    }
+
+    .phoneNumber {
+      border: 1px solid rgb(207, 207, 207);
+      padding: 10px 12px;
+      border-radius: 7px;
+      transition: ease 0.2s;
+
+      &:hover {
+        border: 1px solid theme.$text-color;
+      }
+    }
+  }
+}
