@@ -102,3 +102,15 @@ main {
 * {
   box-sizing: border-box;
 }
+
+.hamburger-react {
+  margin-top: auto;
+  margin-bottom: auto;
+  & > div > div {
+    height: 2px!important;
+  }
+
+  @media only screen and (min-width: 800px) {
+    display: none;
+  }
+}
