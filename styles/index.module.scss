@@ -1,2 +1,96 @@
 @use "theme.scss" as theme;
 @use "../node_modules/rfs/scss.scss" as rfs;
+
+.heroImage {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+}
+
+.container {
+  @include rfs.margin-top(16px);
+  @include rfs.margin-right(16px);
+  @include rfs.margin-bottom(16px);
+  @include rfs.margin-left(16px);
+
+  @media only screen and (min-width: 800px) {
+    @include rfs.margin-right(60px);
+    @include rfs.margin-left(60px);
+  }
+}
+
+.bannerDiv {
+  margin-top: -60px;
+  background-color: theme.$primary-color;
+  color: theme.$background-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;
+
+  @media only screen and (min-width: 800px) {
+    @include rfs.margin-right(40px);
+    @include rfs.margin-left(40px);
+  }
+}
+
+.bannerHeading {
+  @include rfs.padding-right(60px);
+  @include rfs.padding-left(60px);
+}
+
+.indexBody {
+  @include rfs.margin-top(64px);
+  @include rfs.margin-right(20px);
+  @include rfs.margin-bottom(64px);
+  @include rfs.margin-left(20px);
+
+  @media only screen and (min-width: 800px) {
+    @include rfs.margin-right(64px);
+    @include rfs.margin-left(64px);
+  }
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 260px;
+  gap: 80px;
+  @include rfs.margin-top(64px);
+  @include rfs.margin-right(20px);
+  @include rfs.margin-bottom(64px);
+  @include rfs.margin-left(20px);
+
+  @media only screen and (min-width: 800px) {
+    @include rfs.margin-right(64px);
+    @include rfs.margin-left(64px);
+  }
+}
+
+.cardOne {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: red;
+    position: relative;
+}
+
+.cardTwo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: red;
+    position: relative;
+}
+
+.cardThree {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: red;
+    position: relative;
+}

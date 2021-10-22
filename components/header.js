@@ -46,13 +46,13 @@ export default function Header(props) {
               <Link href="/">Home</Link>
             </li>
             <li className={styles.navListItem}>
-              <Link href="/">About</Link>
+              <Link href="/about">About</Link>
             </li>
             <li className={styles.navListItem}>
-              <Link href="/">Services</Link>
+              <Link href="/services">Services</Link>
             </li>
             <li className={styles.navListItem}>
-              <Link href="/">
+              <Link href="tel:804-424-2607">
                 <a className={styles.phoneNumber}>(804) 424-2607</a>
               </Link>
             </li>
