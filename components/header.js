@@ -52,6 +52,9 @@ export default function Header(props) {
               <Link href="/services">Services</Link>
             </li>
             <li className={styles.navListItem}>
+              <Link href="/gift-cards">Gift Cards</Link>
+            </li>
+            <li className={styles.navListItem}>
               <Link href="tel:804-424-2607">
                 <a className={styles.phoneNumber}>(804) 424-2607</a>
               </Link>
