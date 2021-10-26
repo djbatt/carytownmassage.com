@@ -3,11 +3,11 @@ import styles from "../styles/index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
-import HeroImage from "../public/photos/massage-therapy-candle.jpg";
+import HeroImage from "../public/photos/hero-images/massage-therapy-richmond.jpg";
 
-import SwedishMassageImage from "../public/photos/swedish-massage.jpg";
-import TherapeuticMassageImage from "../public/photos/therapeutic-massage.jpeg";
-import SportsMassageImage from "../public/photos/sports-massage.jpeg";
+import SwedishMassageImage from "../public/photos/hero-images/swedish-massage.jpg";
+import TherapeuticMassageImage from "../public/photos/hero-images/therapeutic-massage.jpg";
+import SportsMassageImage from "../public/photos/hero-images/sports-massage.jpg";
 
 import { forwardRef } from "react";
 
@@ -19,6 +19,8 @@ export default function Home(props) {
       </a>
     );
   });
+
+  CardLink.displayName = "CardLink";
   return (
     <>
       <Header />
@@ -32,6 +34,7 @@ export default function Home(props) {
             width="100%"
             height="100%"
             priority
+            alt=""
           ></Image>
         </div>
         <div className={styles.container}>
@@ -43,7 +46,7 @@ export default function Home(props) {
           <div className={styles.indexBody}>
             <p>Request an appointment online or over the phone.</p>
             <p>
-              We're located at 2602 West Main st. in the Imago Salon building!{" "}
+              We&apos;re located at 2602 West Main st. in the Imago Salon building!{" "}
             </p>
             <p>
               There is parking in the back and additional parking in the parking
@@ -67,7 +70,7 @@ export default function Home(props) {
               Please call 804-424-2607 in order to book for a Couples Massage!
             </p>
             <p>Gift Cards Available on the booking page as of 8/20/2021.</p>
-            <p>Check our "Booking" page for prices and full availability!</p>
+            <p>Check our &quot;Booking&quot; page for prices and full availability!</p>
           </div>
           <div className={styles.cardGrid}>
             <div className={styles.cardOne}>
@@ -79,6 +82,7 @@ export default function Home(props) {
                     objectFit="cover"
                     placeholder="blur"
                     className={styles.cardImage}
+                    alt=""
                   ></Image>
                   <p className={styles.cardBody}>Swedish Massage</p>
                 </CardLink>
@@ -93,6 +97,7 @@ export default function Home(props) {
                     objectFit="cover"
                     placeholder="blur"
                     className={styles.cardImage}
+                    alt=""
                   ></Image>
                   <p className={styles.cardBody}>Therapeutic Massage</p>
                 </CardLink>
@@ -107,6 +112,7 @@ export default function Home(props) {
                     objectFit="cover"
                     placeholder="blur"
                     className={styles.cardImage}
+                    alt=""
                   ></Image>
                   <p className={styles.cardBody}>Sports Massage</p>
                 </CardLink>

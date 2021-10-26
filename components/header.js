@@ -18,10 +18,13 @@ export default function Header(props) {
           width={291}
           height={100}
           priority
+          alt=""
         ></Image>
       </a>
     );
   });
+
+  Logo.displayName = "Logo";
 
   //Hamburger State
   const [isOpen, setOpen] = useState(false);
@@ -40,7 +43,10 @@ export default function Header(props) {
             color="#158ba8"
           />
         </div>
-        <div className={styles.collapsingDiv} style={isOpen ? {display: "flex"} : {display: "none"}}>
+        <div
+          className={styles.collapsingDiv}
+          style={isOpen ? { display: "flex" } : { display: "none" }}
+        >
           <ul className={styles.navList}>
             <li className={styles.navListItem}>
               <Link href="/">Home</Link>

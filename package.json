@@ -13,15 +13,16 @@
     "hamburger-react": "^2.4.1",
     "next": "11.1.2",
     "next-seo": "^4.28.1",
-    "next-sitemap": "^1.6.184",
+    "next-sitemap": "^1.6.192",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
     "rfs": "^9.0.6",
-    "sass": "^1.43.2"
+    "sass": "^1.43.3",
+    "sharp": "^0.29.2"
   },
   "devDependencies": {
-    "eslint": "^8.0.1",
+    "eslint": "^7.32.0",
     "eslint-config-next": "11.1.2"
   }
 }
