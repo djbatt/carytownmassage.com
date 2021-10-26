@@ -1,4 +1,5 @@
 import Header from "../components/header";
+import Footer from "../components/footer";
 import styles from "../styles/index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -46,13 +47,6 @@ export default function Home(props) {
           <div className={styles.indexBody}>
             <p>Request an appointment online or over the phone.</p>
             <p>
-              We&apos;re located at 2602 West Main st. in the Imago Salon building!{" "}
-            </p>
-            <p>
-              There is parking in the back and additional parking in the parking
-              lot behind Main and Floyd and Robinson and Davis.{" "}
-            </p>
-            <p>
               Any missed calls will be returned usually within the hour, and
               feel free to text us about booking or with any questions as well!
             </p>
@@ -70,7 +64,10 @@ export default function Home(props) {
               Please call 804-424-2607 in order to book for a Couples Massage!
             </p>
             <p>Gift Cards Available on the booking page as of 8/20/2021.</p>
-            <p>Check our &quot;Booking&quot; page for prices and full availability!</p>
+            <p>
+              Check our &quot;Booking&quot; page for prices and full
+              availability!
+            </p>
           </div>
           <div className={styles.cardGrid}>
             <div className={styles.cardOne}>
@@ -121,7 +118,7 @@ export default function Home(props) {
           </div>
         </div>
       </main>
-      <footer></footer>
+      <Footer/>
     </>
   );
 }

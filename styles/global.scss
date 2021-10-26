@@ -25,15 +25,6 @@ body {
   @include rfs.font-size(16px);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: theme.$heading-font;
-}
-
 h1 {
   @include rfs.font-size(50px);
   @include rfs.margin-top(50px);

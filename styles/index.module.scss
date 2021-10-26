@@ -40,6 +40,8 @@
   @include rfs.padding-right(60px);
   @include rfs.padding-left(60px);
   text-align: center;
+  font-family: theme.$heading-font;
+  font-weight: 600;
 }
 
 .indexBody {
@@ -92,7 +94,7 @@
       & .cardImage {
         border-radius: 7px;
         opacity: 0.5;
-        transition: .5s ease;
+        transition: 0.5s ease;
       }
 
       &:hover {

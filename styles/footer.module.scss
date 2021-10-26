@@ -1,0 +1,79 @@
+@use "theme.scss" as theme;
+@use "../node_modules/rfs/scss.scss" as rfs;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 1200px;
+  @include rfs.margin-top(16px);
+  @include rfs.margin-right(16px);
+  @include rfs.margin-bottom(80px);
+  @include rfs.margin-left(16px);
+
+  @media only screen and (min-width: 800px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footerHeading {
+  @include rfs.font-size(20px);
+  font-weight: 600;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 260px;
+  gap: 30px;
+  @include rfs.margin-right(20px);
+  @include rfs.margin-left(20px);
+
+  @media only screen and (min-width: 800px) {
+    gap: 70px;
+    @include rfs.margin-right(64px);
+    @include rfs.margin-left(64px);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gridItemOne {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    @media only screen and (min-width: 800px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+
+  .gridItemTwo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    @media only screen and (min-width: 800px) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+}
+
+.copyright {
+  margin-top: 30px;
+  @include rfs.margin-right(20px);
+  @include rfs.margin-left(20px);
+
+  @media only screen and (min-width: 800px) {
+    @include rfs.margin-right(64px);
+    @include rfs.margin-left(64px);
+  }
+}
