@@ -19,16 +19,8 @@
     margin-right: auto;
   }
 }
-.indexHeading {
-  display: inline;
-  background: linear-gradient(
-    to bottom,
-    transparent 60%,
-    #f8a29d 40%
-  )
-}
 
-.indexBody {
+.servicesBody {
   @include rfs.margin-top(50px);
   @include rfs.margin-right(20px);
   @include rfs.margin-bottom(64px);

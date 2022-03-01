@@ -1,0 +1,32 @@
+@use "theme.scss" as theme;
+@use "../node_modules/rfs/scss.scss" as rfs;
+
+.heroImage {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+}
+
+.container {
+  max-width: 1200px;
+  @include rfs.margin-top(16px);
+  @include rfs.margin-right(16px);
+  @include rfs.margin-bottom(16px);
+  @include rfs.margin-left(16px);
+
+  @media only screen and (min-width: 800px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.swedishMassageBody {
+  @include rfs.margin-top(50px);
+  @include rfs.margin-right(20px);
+  @include rfs.margin-bottom(64px);
+  @include rfs.margin-left(20px);
+
+  @media only screen and (min-width: 800px) {
+    @include rfs.margin-right(64px);
+    @include rfs.margin-left(64px);
+  }
+}

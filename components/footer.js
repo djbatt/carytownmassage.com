@@ -54,7 +54,7 @@ export default function Footer(props) {
         <div className={styles.gridItemOne}>
           <span className={styles.footerHeading}>Locate Us</span>
           <p>
-            Carytown Massage is located at 3316 W Cary St, Richmond VA 23221 inside the StylePod building, we are unit 104. There is free parking available in the back and paid parking available in the parking garage behind our building.
+            Carytown Massage is located at 3316 W Cary St, Richmond VA 23221 inside the StylePod building, we are in unit 104. There is free parking available in the back and paid parking available in the parking garage behind our building.
             Our building marked in pink on the map.
           </p>
           <p>Any missed calls will usually be returned within the hour. Feel free to text us at (804) 424-2607 with any questions you may have.</p>
