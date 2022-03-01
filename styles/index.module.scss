@@ -19,33 +19,18 @@
     margin-right: auto;
   }
 }
-
-.bannerDiv {
-  margin-top: -45px;
-  background-color: theme.$primary-color;
-  color: theme.$background-color;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;
-
-  @media only screen and (min-width: 800px) {
-    @include rfs.margin-right(40px);
-    @include rfs.margin-left(40px);
-  }
-}
-
-.bannerHeading {
-  @include rfs.padding-right(60px);
-  @include rfs.padding-left(60px);
-  text-align: center;
-  font-family: theme.$heading-font;
+.indexHeading {
   font-weight: 600;
+  display: inline;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    #f8a29d 40%
+  )
 }
 
 .indexBody {
-  @include rfs.margin-top(64px);
+  @include rfs.margin-top(50px);
   @include rfs.margin-right(20px);
   @include rfs.margin-bottom(64px);
   @include rfs.margin-left(20px);
@@ -80,7 +65,7 @@
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;
     border-radius: 7px;
-    background-color: rgb(39, 39, 39);
+    background-color: #491d18;
 
     & > a.cardLink {
       display: flex;

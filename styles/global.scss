@@ -26,33 +26,33 @@ body {
 }
 
 h1 {
+  @include rfs.font-size(60px);
+  @include rfs.margin-top(60px);
+  @include rfs.margin-bottom(60px);
+}
+
+h2 {
   @include rfs.font-size(50px);
   @include rfs.margin-top(50px);
   @include rfs.margin-bottom(50px);
 }
 
-h2 {
+h3 {
   @include rfs.font-size(40px);
   @include rfs.margin-top(40px);
   @include rfs.margin-bottom(40px);
 }
 
-h3 {
+h4 {
   @include rfs.font-size(30px);
   @include rfs.margin-top(30px);
   @include rfs.margin-bottom(30px);
 }
 
-h4 {
+h5 {
   @include rfs.font-size(20px);
   @include rfs.margin-top(20px);
   @include rfs.margin-bottom(20px);
-}
-
-h5 {
-  @include rfs.font-size(16px);
-  @include rfs.margin-top(16px);
-  @include rfs.margin-bottom(16px);
 }
 
 p {
@@ -90,7 +90,7 @@ main {
   flex: 1;
   margin-top: 139px;
 
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 860px) {
     margin-top: 109px;
   }
 }
@@ -106,7 +106,7 @@ main {
     height: 2px!important;
   }
 
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 860px) {
     display: none;
   }
 }

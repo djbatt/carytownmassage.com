@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: "https://massageonmainrva.com",
+    siteUrl: "https://carytownmassage.com",
     generateRobotsTxt: true, // (optional)
     // ...other options
   };

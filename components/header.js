@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import MassageOnMainLogo from "../public/Massage-On-Main-Logo.svg";
+import BrandLogo from "../public/Carytown-Massage-Logo.svg";
 import { forwardRef, useState, useEffect } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 
@@ -13,7 +13,7 @@ export default function Header(props) {
     return (
       <a href={href} onClick={onClick} ref={ref} className={styles.logoAnchor}>
         <Image
-          src={MassageOnMainLogo}
+          src={BrandLogo}
           layout="responsive"
           width={291}
           height={100}
@@ -40,7 +40,7 @@ export default function Header(props) {
             toggled={isOpen}
             toggle={setOpen}
             label="Navigation Menu"
-            color="#158ba8"
+            color="#ff6f61"
           />
         </div>
         <div
@@ -79,13 +79,13 @@ export default function Header(props) {
               <div className={styles.spacer}></div>
             </li>
             <li className={styles.contactListItem}>
-              <span>Anthony@massageonmainrva.com</span>
+              <span>Anthony@carytownmassage.com</span>
             </li>
             <li className={styles.contactListItem}>
-              <span>2602 West Main St.</span>
+              <span>3316 West Cary St, StylePod, Unit 104</span>
             </li>
             <li className={styles.contactListItem}>
-              <span>Richmond, Virginia 23220</span>
+              <span>Richmond, Virginia 23221</span>
             </li>
           </ul>
         </div>

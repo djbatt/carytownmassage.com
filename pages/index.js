@@ -39,34 +39,16 @@ export default function Home(props) {
           ></Image>
         </div>
         <div className={styles.container}>
-          <div className={styles.bannerDiv}>
-            <h4 className={styles.bannerHeading}>
-              Massage On Main is located in the heart of Richmond, VA.
-            </h4>
-          </div>
           <div className={styles.indexBody}>
-            <p>Request an appointment online or over the phone.</p>
+            <h4 className={styles.indexHeading}>
+              Carytown Massage is located in the heart of Richmond, VA.
+            </h4>
+            <h5>Request an appointment online or over the phone.</h5>
             <p>
-              Any missed calls will be returned usually within the hour, and
-              feel free to text us about booking or with any questions as well!
+            We wish to provide you the most high-quality experience we can, in a safe, clean environment. Our licensed professionals will help you relax and integrate massage into a part of your preventative health routine.
             </p>
             <p>
-              We wish to provide you the most high-quality experience we can in
-              a safe, clean environment. Let our licensed professionals help you
-              relax and be a part of your preventative health routine!
-            </p>
-            <p>Now Offering Sugar Foot Scrub as of 4/7/2021.</p>
-            <p>
-              We can accomadate Couples Massage by request but require at least
-              a weeks notice so online booking is not availble for this service!
-            </p>
-            <p>
-              Please call 804-424-2607 in order to book for a Couples Massage!
-            </p>
-            <p>Gift Cards Available on the booking page as of 8/20/2021.</p>
-            <p>
-              Check our &quot;Booking&quot; page for prices and full
-              availability!
+            We can accommodate couples massage by request but require at least one week notice to book. Online booking is not available for this service.
             </p>
           </div>
           <div className={styles.cardGrid}>
@@ -118,7 +100,7 @@ export default function Home(props) {
           </div>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </>
   );
 }

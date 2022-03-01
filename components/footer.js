@@ -24,50 +24,29 @@ function createMapOptions(maps) {
 export default function Footer(props) {
   const mapData = {
     center: {
-      lat: 37.55211552295359,
-      lng: -77.47332695057663,
+      lat: 37.55462875256322,
+      lng: -77.48456310462822,
     },
-    business: {
-      lat: 37.55211552295359,
-      lng: -77.47332695057663,
-    },
-    zoom: 18,
+    zoom: 19,
     apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY,
   };
   const handleApiLoaded = (map, maps) => {
-    const parkingCoords = [
-      { lat: 37.5523024525228, lng: -77.47327277635917 },
-      { lat: 37.552276403529895, lng: -77.47320572113185 },
-      { lat: 37.55216317004676, lng: -77.47326338862733 },
-      { lat: 37.55218762424077, lng: -77.47332843219783 },
+    const buildingCoords = [
+      { lat: 37.55491653623035, lng: -77.48443587452248 },
+      { lat: 37.55488623540266, lng: -77.48435004383563 },
+      { lat: 37.55461441568619, lng: -77.48450081365147 },
+      { lat: 37.55464547891889, lng: -77.48458420318325 },
     ];
 
-    var parking = new maps.Polygon({
-      paths: parkingCoords,
-      strokeColor: "#5cb85e",
+    var building = new maps.Polygon({
+      paths: buildingCoords,
+      strokeColor: "#ff6f61",
       strokeOpacity: 1,
       strokeWeight: 2,
-      fillColor: "#5cb85e",
+      fillColor: "#ff6f61",
       fillOpacity: 1,
     });
-    parking.setMap(map);
-
-    const extraParkingCoords = [
-      { lat: 37.55221258006946, lng: -77.47248344111938 },
-      { lat: 37.5521774936264, lng: -77.47238889324888 },
-      { lat: 37.55206691806147, lng: -77.4724552779239 },
-      { lat: 37.552099346489356, lng: -77.4725478141376 },
-    ];
-
-    var extraParking = new maps.Polygon({
-      paths: extraParkingCoords,
-      strokeColor: "#5cb85e",
-      strokeOpacity: 1,
-      strokeWeight: 2,
-      fillColor: "#5cb85e",
-      fillOpacity: 1,
-    });
-    extraParking.setMap(map);
+    building.setMap(map);
   };
   return (
     <footer className={styles.footer}>
@@ -75,12 +54,10 @@ export default function Footer(props) {
         <div className={styles.gridItemOne}>
           <span className={styles.footerHeading}>Locate Us</span>
           <p>
-            Massage On Main is located at 2602 W Main St, Richmond VA 23220 in
-            the Imago Salon building. There is parking in the back and an
-            additional parking lot across Robinson. Our additional parking lot
-            is cement paved and located behind Main St and Floyd, and Robinson
-            and Davis. Parking is marked in green on the map.
+            Carytown Massage is located at 3316 W Cary St, Richmond VA 23221 inside the StylePod building, we are unit 104. There is free parking available in the back and paid parking available in the parking garage behind our building.
+            Our building marked in pink on the map.
           </p>
+          <p>Any missed calls will usually be returned within the hour. Feel free to text us at (804) 424-2607 with any questions you may have.</p>
           <span className={styles.footerHeading}>Business Hours</span>
           <ul style={{ padding: 0, listStyleType: "none" }}>
             <li style={{ paddingBottom: "16px" }}>
@@ -91,8 +68,8 @@ export default function Footer(props) {
             </li>
           </ul>
           <span className={styles.footerHeading}>Connect With Us</span>
-          <ul style={{ padding: 0, listStyleType: "none" }}>
-            <li style={{ paddingBottom: "16px" }}>
+          <ul className={styles.connectUnorderedList}>
+            <li className={styles.connectListItem}>
               <Link href="https://www.facebook.com/massageonmainrva" passHref>
                 <a
                   style={{
@@ -104,11 +81,11 @@ export default function Footer(props) {
                   }}
                 >
                   <span style={{ margin: 0 }}>Facebook</span>
-                  <GoLinkExternal />
+                  <GoLinkExternal style={{ margin: "auto" }} />
                 </a>
               </Link>
             </li>
-            <li style={{ padding: 0, listStyleType: "none" }}>
+            <li className={styles.connectListItem}>
               <Link href="https://www.instagram.com/massageonmainrva/" passHref>
                 <a
                   style={{
@@ -120,7 +97,7 @@ export default function Footer(props) {
                   }}
                 >
                   <span style={{ margin: 0 }}>Instagram</span>
-                  <GoLinkExternal />
+                  <GoLinkExternal style={{ margin: "auto" }} />
                 </a>
               </Link>
             </li>
@@ -137,9 +114,6 @@ export default function Footer(props) {
             yesIWantToUseGoogleMapApiInternals //this is important!
             onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
           >
-            <div lat={mapData.business.lat} lng={mapData.business.lng}>
-              <GoLocation size="16px" color="#158ba8" />
-            </div>
           </GoogleMapReact>
         </div>
       </div>
@@ -149,7 +123,7 @@ export default function Footer(props) {
           <Link href="/privacy-policy">
             <a style={{ fontSize: "12px" }}>Privacy Policy</a>
           </Link>{" "}
-          | © {new Date().getFullYear()} Massage On Main LLC
+          | © {new Date().getFullYear()} Carytown Massage
         </span>
       </div>
     </footer>
