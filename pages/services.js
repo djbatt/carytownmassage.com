@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import styles from "../styles/services.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 import HeroImage from "../public/photos/hero-images/massage-therapy-services.jpg";
 
@@ -24,6 +25,17 @@ export default function Home(props) {
   CardLink.displayName = "CardLink";
   return (
     <>
+      <NextSeo
+        title="A variety of massage services - Massage Richmond, VA"
+        description="There are many benefits of massage, people enjoy a deep connection to their inner self, which allows for a new experience of comfort."
+        canonical="https://carytownmassage.com/"
+        openGraph={{
+          url: "https://carytownmassage.com/",
+          title: "A variety of massage services - Massage Richmond, VA",
+          description: "There are many benefits of massage, people enjoy a deep connection to their inner self, which allows for a new experience of comfort.",
+          site_name: "Carytown Massage",
+        }}
+      />
       <Header />
       <main>
         <div className={styles.heroImage}>
@@ -41,11 +53,11 @@ export default function Home(props) {
         <div className={styles.container}>
           <div className={styles.servicesBody}>
             <h4>
-            Services
+              Services
             </h4>
             <h5>We have a variety of massage services.</h5>
             <p>
-            There are many benefits of massage, people enjoy a deep connection to their inner self, which allows for a new experience of self-awareness and comfort. In this modern-day technology-rich lifestyle of today, it is becoming increasingly necessary to learn to relax and regenerate. 
+              There are many benefits of massage, people enjoy a deep connection to their inner self, which allows for a new experience of self-awareness and comfort. In this modern-day technology-rich lifestyle of today, it is becoming increasingly necessary to learn to relax and regenerate.
             </p>
           </div>
           <div className={styles.cardGrid}>

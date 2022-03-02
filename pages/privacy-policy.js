@@ -2,12 +2,24 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import styles from "../styles/privacy-policy.module.scss";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 
 import HeroImage from "../public/photos/hero-images/candles-and-stones.jpg";
 
 export default function Home(props) {
     return (
         <>
+        <NextSeo
+            title="Privacy Policy - Massage Richmond, VA"
+            description="We have prepared this policy to give you notice. This notice applies only to Carytown Massage and not to any other sites with which we link."
+            canonical="https://carytownmassage.com/"
+            openGraph={{
+                url: "https://carytownmassage.com/",
+                title: "We have prepared this policy to give you notice. This notice applies only to Carytown Massage and not to any other sites with which we link.",
+                description: "Privacy Policy - Massage Richmond, VA",
+                site_name: "Carytown Massage",
+            }}
+        />
             <Header />
             <main>
                 <div className={styles.heroImage}>

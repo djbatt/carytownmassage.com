@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
 
 // Default SEO
-import { DefaultSeo } from "next-seo";
+import { DefaultSeo, LocalBusinessJsonLd } from "next-seo";
 import DefaultSeoConfig from "../next-seo.config.js";
 
 // Global CSS
@@ -27,6 +27,34 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <DefaultSeo {...DefaultSeoConfig} />
+      <LocalBusinessJsonLd
+        type="HealthAndBeautyBusiness"
+        id="https://carytownmassage.com"
+        name="Carytown Massage"
+        description="Massage therapy in Richmond, VA."
+        url="https://carytownmassage.com"
+        telephone="+18044242607"
+        address={{
+          streetAddress: '3316 West Cary Street',
+          addressLocality: 'Richmond',
+          addressRegion: 'VA',
+          postalCode: '23221',
+          addressCountry: 'US',
+        }}
+        geo={{
+          latitude: "37.55462875256322",
+          longitude: "-77.48456310462822",
+        }}
+        areaServed={[
+          {
+            geoMidpoint: {
+              latitude: "37.55462875256322",
+              longitude: "-77.48456310462822",
+            },
+            geoRadius: '40000',
+          },
+        ]}
+      />
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         id="gtagSrc"

@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import styles from "../styles/index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 import HeroImage from "../public/photos/hero-images/massage-therapy-richmond.jpg";
 
@@ -24,6 +25,17 @@ export default function Home(props) {
   CardLink.displayName = "CardLink";
   return (
     <>
+      <NextSeo
+        title="Carytown Massage - Massage Richmond, VA"
+        description="Carytown is located in the heart of Richmond, VA. Massage will help you escape from today's erratic and busy life. Massage Therapy Richmond VA."
+        canonical="https://carytownmassage.com/"
+        openGraph={{
+          url: "https://carytownmassage.com/",
+          title: "Carytown Massage - Massage Richmond, VA",
+          description: "Carytown is located in the heart of Richmond, VA. Massage will help you escape from today's erratic and busy life. Massage Therapy Richmond VA.",
+          site_name: "Carytown Massage",
+        }}
+      />
       <Header />
       <main>
         <div className={styles.heroImage}>
@@ -45,10 +57,10 @@ export default function Home(props) {
             </h4>
             <h5>Request an appointment online or over the phone.</h5>
             <p>
-            We wish to provide you the most high-quality experience we can, in a safe, clean environment. Our licensed professionals will help you relax and integrate massage into a part of your preventative health routine.
+              We wish to provide you the most high-quality experience we can, in a safe, clean environment. Our licensed professionals will help you relax and integrate massage into a part of your preventative health routine.
             </p>
             <p>
-            We can accommodate couples massage by request but require at least one week notice to book. Online booking is not available for this service.
+              We can accommodate couples massage by request but require at least one week notice to book. Online booking is not available for this service.
             </p>
           </div>
           <div className={styles.cardGrid}>

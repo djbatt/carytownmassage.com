@@ -2,12 +2,24 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import styles from "../../styles/therapeutic-massage.module.scss";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 
 import HeroImage from "../../public/photos/hero-images/therapeutic-massage.jpg";
 
 export default function Home(props) {
     return (
         <>
+            <NextSeo
+                title="Best therapeutic massage in Richmond - Massage Richmond, VA"
+                description="Therapeutic massage is extremely healing and refreshing. Take a break from your busy life to experience this blissful escape in Richmond VA."
+                canonical="https://carytownmassage.com/"
+                openGraph={{
+                    url: "https://carytownmassage.com/",
+                    title: "Best therapeutic massage in Richmond - Massage Richmond, VA",
+                    description: "Therapeutic massage is extremely healing and refreshing. Take a break from your busy life to experience this blissful escape in Richmond VA.",
+                    site_name: "Carytown Massage",
+                }}
+            />
             <Header />
             <main>
                 <div className={styles.heroImage}>

@@ -2,12 +2,24 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import styles from "../../styles/sports-massage.module.scss";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 
 import HeroImage from "../../public/photos/hero-images/sports-massage.jpg";
 
 export default function Home(props) {
     return (
         <>
+            <NextSeo
+                title="Massage for all sports and activities - Massage Richmond, VA"
+                description="Come visit us at Massage On Main. Sports Massage is for athletes and competitors. Refresh and rejuvenate your body."
+                canonical="https://carytownmassage.com/"
+                openGraph={{
+                    url: "https://carytownmassage.com/",
+                    title: "Massage for all sports and activities - Massage Richmond, VA",
+                    description: "Come visit us at Massage On Main. Sports Massage is for athletes and competitors. Refresh and rejuvenate your body.",
+                    site_name: "Carytown Massage",
+                }}
+            />
             <Header />
             <main>
                 <div className={styles.heroImage}>

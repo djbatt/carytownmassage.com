@@ -3,12 +3,24 @@ import Footer from "../components/footer";
 import styles from "../styles/gift-cards.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 import HeroImage from "../public/photos/hero-images/good-vibes-only.jpg";
 
 export default function Home(props) {
     return (
         <>
+        <NextSeo
+          title="Carytown Massage - Massage Richmond, VA"
+          description="Carytown is located in the heart of Richmond, VA. Massage will help you escape from today's erratic and busy life. Massage Therapy Richmond VA."
+          canonical="https://carytownmassage.com/"
+          openGraph={{
+            url: "https://carytownmassage.com/",
+            title: "Carytown Massage - Massage Richmond, VA",
+            description: "Carytown is located in the heart of Richmond, VA. Massage will help you escape from today's erratic and busy life. Massage Therapy Richmond VA.",
+            site_name: "Carytown Massage",
+          }}
+        />
             <Header />
             <main>
                 <div className={styles.heroImage}>
