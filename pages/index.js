@@ -47,7 +47,7 @@ export default function Home(props) {
             width="100%"
             height="100%"
             priority
-            alt=""
+            alt="Candle lit in relaxing place"
           ></Image>
         </div>
         <div className={styles.container}>
@@ -73,7 +73,7 @@ export default function Home(props) {
                     objectFit="cover"
                     placeholder="blur"
                     className={styles.cardImage}
-                    alt=""
+                    alt="Picture of swedish massage"
                   ></Image>
                   <p className={styles.cardBody}>Swedish Massage</p>
                 </CardLink>
@@ -88,7 +88,7 @@ export default function Home(props) {
                     objectFit="cover"
                     placeholder="blur"
                     className={styles.cardImage}
-                    alt=""
+                    alt="Picture of therapeutic massage"
                   ></Image>
                   <p className={styles.cardBody}>Therapeutic Massage</p>
                 </CardLink>
@@ -103,7 +103,7 @@ export default function Home(props) {
                     objectFit="cover"
                     placeholder="blur"
                     className={styles.cardImage}
-                    alt=""
+                    alt="Picture of sports massage"
                   ></Image>
                   <p className={styles.cardBody}>Sports Massage</p>
                 </CardLink>

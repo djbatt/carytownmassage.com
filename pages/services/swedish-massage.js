@@ -31,7 +31,7 @@ export default function Home(props) {
                         width="100%"
                         height="100%"
                         priority
-                        alt=""
+                        alt="Picture of swedish massage"
                     ></Image>
                 </div>
                 <div className={styles.container}>

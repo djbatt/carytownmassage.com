@@ -31,7 +31,7 @@ export default function Home(props) {
                         width="100%"
                         height="100%"
                         priority
-                        alt=""
+                        alt="Relaxing candles with hot stones and towel"
                     ></Image>
                 </div>
                 <div className={styles.container}>

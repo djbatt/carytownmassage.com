@@ -18,7 +18,7 @@ export default function Header(props) {
           width={291}
           height={100}
           priority
-          alt=""
+          alt="Carytown Massage Logo"
         ></Image>
       </a>
     );

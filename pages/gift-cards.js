@@ -32,7 +32,7 @@ export default function Home(props) {
                         width="100%"
                         height="100%"
                         priority
-                        alt=""
+                        alt="Picture of sign with 'good vibes only on the sign'"
                     ></Image>
                 </div>
                 <div className={styles.container}>
