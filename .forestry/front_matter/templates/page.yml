@@ -39,3 +39,5 @@ fields:
     min: 
     max: 
   label: Content
+pages:
+- page-content/Home.md
