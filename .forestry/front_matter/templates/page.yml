@@ -1,4 +1,24 @@
 ---
 label: Page
 hide_body: false
-fields: []
+fields:
+- name: seo_title
+  type: text
+  config:
+    required: false
+  label: SEO Title
+- name: seo_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: SEO Description
+- name: seo_site_name
+  type: text
+  config:
+    required: false
+  label: SEO Site Name
+  description: The name of your business or website
