@@ -22,3 +22,20 @@ fields:
     required: false
   label: SEO Site Name
   description: The name of your business or website
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+- name: sub_heading
+  type: text
+  config:
+    required: false
+  label: Sub Heading
+- name: content
+  type: blocks
+  template_types: []
+  config:
+    min: 
+    max: 
+  label: Content
