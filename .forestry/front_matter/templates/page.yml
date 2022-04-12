@@ -34,3 +34,4 @@ fields:
   label: Sub Heading
 pages:
 - page-content/Home.md
+- page-content/example.md
