@@ -4,6 +4,9 @@ import styles from "../styles/index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
+//import markdownToHtml from "../lib/markdownToHtml";
+import { getPages } from "../lib/api";
+//import HomeContent from "../page-content/Home.md"
 
 import HeroImage from "../public/photos/hero-images/massage-therapy-richmond.jpg";
 
@@ -21,6 +24,8 @@ export default function Home(props) {
       </a>
     );
   });
+
+  console.log(props);
 
   CardLink.displayName = "CardLink";
   return (
@@ -115,4 +120,14 @@ export default function Home(props) {
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps({ params }) {
+  const content = getPages();
+
+  return {
+    props: {
+      content: content,
+    }, // will be passed to the page component as props
+  }
 }
