@@ -19,5 +19,3 @@ fields:
   config:
     required: false
     color_format: Hex
-pages:
-- page-content/site-information.md
