@@ -1,4 +1,21 @@
 ---
 label: Site Information
 hide_body: true
-fields: []
+fields:
+- name: site_name
+  type: text
+  config:
+    required: false
+  label: Site Name
+- name: main_color
+  type: color
+  label: Main Color
+  config:
+    required: false
+    color_format: Hex
+- name: secondary_color
+  type: color
+  label: Secondary Color
+  config:
+    required: false
+    color_format: Hex
