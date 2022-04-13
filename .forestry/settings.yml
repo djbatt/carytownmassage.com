@@ -5,8 +5,9 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
-  path: site-information
+  path: site-information.md
   label: Site Information
+  read_only: false
 - type: directory
   path: page-content
   label: Pages
