@@ -32,5 +32,3 @@ fields:
   config:
     required: false
   label: Sub Heading
-pages:
-- page-content/example.md
