@@ -4,23 +4,26 @@ import styles from "../styles/gift-cards.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
+import markdownToHtml from "../lib/markdownToHtml";
+import { getPageContent } from "../lib/api";
+const markdownFile = "gift-cards.md";
 
 import HeroImage from "../public/photos/hero-images/good-vibes-only.jpg";
 
 export default function Home(props) {
     return (
         <>
-        <NextSeo
-          title="Carytown Massage - Massage Richmond, VA"
-          description="Carytown is located in the heart of Richmond, VA. Massage will help you escape from today's erratic and busy life. Massage Therapy Richmond VA."
-          canonical="https://carytownmassage.com/"
-          openGraph={{
-            url: "https://carytownmassage.com/",
-            title: "Carytown Massage - Massage Richmond, VA",
-            description: "Carytown is located in the heart of Richmond, VA. Massage will help you escape from today's erratic and busy life. Massage Therapy Richmond VA.",
-            site_name: "Carytown Massage",
-          }}
-        />
+            <NextSeo
+                title={props.data.seo_title}
+                description={props.data.seo_description}
+                canonical="https://carytownmassage.com/"
+                openGraph={{
+                    url: "https://carytownmassage.com/",
+                    title: props.data.seo_title,
+                    description: props.data.seo_description,
+                    site_name: props.data.seo_site_name,
+                }}
+            />
             <Header />
             <main>
                 <div className={styles.heroImage}>
@@ -37,16 +40,11 @@ export default function Home(props) {
                 </div>
                 <div className={styles.container}>
                     <div className={styles.giftCardsBody}>
-                        <h4>
-                            Gift Cards
+                        <h4 className={styles.indexHeading}>
+                            {props.data.heading}
                         </h4>
-                        <h5>The gift of relaxation and wellness is great for any special occasion.</h5>
-                        <p>
-                            Send your love to your family and friends by giving them gift cards from Carytown Massage. It’s a sign of how much you care. Now, your friends and family can enjoy good health and happiness as they get treated to one of our custom massages.
-                        </p>
-                        <p>
-                            To purchase a gift card you can click on the link below and choose any of our gift cards to fit the occasion.
-                        </p>
+                        <h5>{props.data.sub_heading}</h5>
+                        <div dangerouslySetInnerHTML={{ __html: props.content }} />
                         <div className={styles.giftCardDiv}>
                             <Link
                                 href="https://squareup.com/gift/ML8B3JG9401F6/order"
@@ -61,4 +59,20 @@ export default function Home(props) {
             <Footer />
         </>
     );
+}
+
+export async function getServerSideProps({ params }) {
+    const markdown = getPageContent(markdownFile);
+
+    const data = markdown.data;
+    const content = await markdownToHtml(markdown.content || '')
+
+    //console.log(content);
+
+    return {
+        props: {
+            data: data,
+            content: content
+        },
+    }
 }

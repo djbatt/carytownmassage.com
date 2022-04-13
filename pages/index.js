@@ -6,7 +6,6 @@ import Link from "next/link";
 import { NextSeo } from "next-seo";
 import markdownToHtml from "../lib/markdownToHtml";
 import { getPageContent } from "../lib/api";
-
 const markdownFile = "index.md";
 
 import HeroImage from "../public/photos/hero-images/massage-therapy-richmond.jpg";
@@ -124,7 +123,7 @@ export async function getServerSideProps({ params }) {
   const data = markdown.data;
   const content = await markdownToHtml(markdown.content || '')
 
-  console.log(content);
+  //console.log(content);
 
   return {
     props: {

@@ -3,6 +3,9 @@ import Footer from "../../components/footer";
 import styles from "../../styles/therapeutic-massage.module.scss";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
+import markdownToHtml from "../../lib/markdownToHtml";
+import { getPageContent } from "../../lib/api";
+const markdownFile = "therapeutic-massage.md";
 
 import HeroImage from "../../public/photos/hero-images/therapeutic-massage.jpg";
 
@@ -10,14 +13,14 @@ export default function Home(props) {
     return (
         <>
             <NextSeo
-                title="Best therapeutic massage in Richmond - Massage Richmond, VA"
-                description="Therapeutic massage is extremely healing and refreshing. Take a break from your busy life to experience this blissful escape in Richmond VA."
+                title={props.data.seo_title}
+                description={props.data.seo_description}
                 canonical="https://carytownmassage.com/"
                 openGraph={{
                     url: "https://carytownmassage.com/",
-                    title: "Best therapeutic massage in Richmond - Massage Richmond, VA",
-                    description: "Therapeutic massage is extremely healing and refreshing. Take a break from your busy life to experience this blissful escape in Richmond VA.",
-                    site_name: "Carytown Massage",
+                    title: props.data.seo_title,
+                    description: props.data.seo_description,
+                    site_name: props.data.seo_site_name,
                 }}
             />
             <Header />
@@ -36,20 +39,32 @@ export default function Home(props) {
                 </div>
                 <div className={styles.container}>
                     <div className={styles.therapeuticMassageBody}>
-                        <h4>
-                            Therapeutic Massage
+                        <h4 className={styles.indexHeading}>
+                            {props.data.heading}
                         </h4>
-                        <h5>Rejuvenate your body with massage therapy.</h5>
-                        <p>
-                            Our therapeutic massage reaches the deep layers of the targeted muscle and relaxes the body. The right therapeutic massage, paired with a peaceful setting will result in a heavenly experience. The benefits start almost instantly; the relaxing of muscles, better blood circulation, increase in oxygen levels, and the break down of knots.
-                        </p>
-                        <p>
-                            A therapeutic massage is extremely healing and refreshing. Our goal is to melt away all of your muscle tension and increase blood flow.
-                        </p>
+                        <h5>{props.data.sub_heading}</h5>
+                        <div dangerouslySetInnerHTML={{ __html: props.content }} />
                     </div>
                 </div>
             </main>
             <Footer />
         </>
     );
+}
+
+
+export async function getServerSideProps({ params }) {
+    const markdown = getPageContent(markdownFile);
+
+    const data = markdown.data;
+    const content = await markdownToHtml(markdown.content || '')
+
+    //console.log(content);
+
+    return {
+        props: {
+            data: data,
+            content: content
+        },
+    }
 }

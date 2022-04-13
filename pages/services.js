@@ -4,6 +4,9 @@ import styles from "../styles/services.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
+import markdownToHtml from "../lib/markdownToHtml";
+import { getPageContent } from "../lib/api";
+const markdownFile = "services.md";
 
 import HeroImage from "../public/photos/hero-images/massage-therapy-services.jpg";
 
@@ -26,14 +29,14 @@ export default function Home(props) {
   return (
     <>
       <NextSeo
-        title="A variety of massage services - Massage Richmond, VA"
-        description="There are many benefits of massage, people enjoy a deep connection to their inner self, which allows for a new experience of comfort."
+        title={props.data.seo_title}
+        description={props.data.seo_description}
         canonical="https://carytownmassage.com/"
         openGraph={{
           url: "https://carytownmassage.com/",
-          title: "A variety of massage services - Massage Richmond, VA",
-          description: "There are many benefits of massage, people enjoy a deep connection to their inner self, which allows for a new experience of comfort.",
-          site_name: "Carytown Massage",
+          title: props.data.seo_title,
+          description: props.data.seo_description,
+          site_name: props.data.seo_site_name,
         }}
       />
       <Header />
@@ -52,13 +55,11 @@ export default function Home(props) {
         </div>
         <div className={styles.container}>
           <div className={styles.servicesBody}>
-            <h4>
-              Services
+            <h4 className={styles.indexHeading}>
+              {props.data.heading}
             </h4>
-            <h5>We have a variety of massage services.</h5>
-            <p>
-              There are many benefits of massage, people enjoy a deep connection to their inner self, which allows for a new experience of self-awareness and comfort. In this modern-day technology-rich lifestyle of today, it is becoming increasingly necessary to learn to relax and regenerate.
-            </p>
+            <h5>{props.data.sub_heading}</h5>
+            <div dangerouslySetInnerHTML={{ __html: props.content }} />
           </div>
           <div className={styles.cardGrid}>
             <div className={styles.cardOne}>
@@ -112,4 +113,21 @@ export default function Home(props) {
       <Footer />
     </>
   );
+}
+
+
+export async function getServerSideProps({ params }) {
+  const markdown = getPageContent(markdownFile);
+
+  const data = markdown.data;
+  const content = await markdownToHtml(markdown.content || '')
+
+  //console.log(content);
+
+  return {
+    props: {
+      data: data,
+      content: content
+    },
+  }
 }
