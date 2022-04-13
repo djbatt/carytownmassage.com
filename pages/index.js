@@ -8,7 +8,6 @@ import markdownToHtml from "../lib/markdownToHtml";
 import { getPageContent } from "../lib/api";
 
 const markdownFile = "index.md";
-//import HomeContent from "../page-content/Home.md"
 
 import HeroImage from "../public/photos/hero-images/massage-therapy-richmond.jpg";
 
