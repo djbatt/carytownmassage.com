@@ -5,7 +5,6 @@ seo_description: Carytown is located in the heart of Richmond, VA. Massage will 
 seo_site_name: Carytown Massage
 heading: Carytown Massage is located in the heart of Richmond, VA.
 sub_heading: Request an appointment online or over the phone.
-content: []
 
 ---
 
