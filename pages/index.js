@@ -4,8 +4,10 @@ import styles from "../styles/index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
-//import markdownToHtml from "../lib/markdownToHtml";
-import { getPages } from "../lib/api";
+import markdownToHtml from "../lib/markdownToHtml";
+import { getPageContent } from "../lib/api";
+
+const markdownFile = "index.md";
 //import HomeContent from "../page-content/Home.md"
 
 import HeroImage from "../public/photos/hero-images/massage-therapy-richmond.jpg";
@@ -25,20 +27,20 @@ export default function Home(props) {
     );
   });
 
-  console.log(props);
+  //console.log(props);
 
   CardLink.displayName = "CardLink";
   return (
     <>
       <NextSeo
-        title="Carytown Massage - Massage Richmond, VA"
-        description="Carytown is located in the heart of Richmond, VA. Massage will help you escape from today's erratic and busy life. Massage Therapy Richmond VA."
+        title={props.data.seo_title}
+        description={props.data.seo_description}
         canonical="https://carytownmassage.com/"
         openGraph={{
           url: "https://carytownmassage.com/",
-          title: "Carytown Massage - Massage Richmond, VA",
-          description: "Carytown is located in the heart of Richmond, VA. Massage will help you escape from today's erratic and busy life. Massage Therapy Richmond VA.",
-          site_name: "Carytown Massage",
+          title: props.data.seo_title,
+          description: props.data.seo_description,
+          site_name: props.data.seo_site_name,
         }}
       />
       <Header />
@@ -58,15 +60,10 @@ export default function Home(props) {
         <div className={styles.container}>
           <div className={styles.indexBody}>
             <h4 className={styles.indexHeading}>
-              Carytown Massage is located in the heart of Richmond, VA.
+              {props.data.heading}
             </h4>
-            <h5>Request an appointment online or over the phone.</h5>
-            <p>
-              We wish to provide you the most high-quality experience we can, in a safe, clean environment. Our licensed professionals will help you relax and integrate massage into a part of your preventative health routine.
-            </p>
-            <p>
-              We can accommodate couples massage by request but require at least one week notice to book. Online booking is not available for this service.
-            </p>
+            <h5>{props.data.sub_heading}</h5>
+            <div dangerouslySetInnerHTML={{ __html: props.content }} />
           </div>
           <div className={styles.cardGrid}>
             <div className={styles.cardOne}>
@@ -123,11 +120,17 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps({ params }) {
-  const content = getPages();
+  const markdown = getPageContent(markdownFile);
+
+  const data = markdown.data;
+  const content = await markdownToHtml(markdown.content || '')
+
+  console.log(content);
 
   return {
     props: {
-      content: content,
-    }, // will be passed to the page component as props
+      data: data,
+      content: content
+    },
   }
 }
