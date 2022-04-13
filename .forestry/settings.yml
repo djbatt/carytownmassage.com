@@ -5,16 +5,18 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: heading
+  label: Settings
+- type: document
+  path: site-information.md
+  label: Site Information
+  read_only: false
+- type: heading
   label: Content
 - type: directory
   path: page-content
   label: Pages
   create: all
   match: "**/*"
-- type: document
-  path: site-information.md
-  label: Site Information
-  read_only: false
 upload_dir: public
 public_path: "/public"
 front_matter_path: ''
