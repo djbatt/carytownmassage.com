@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# forestry
+/.forestry
+
 # production
 /build
 
