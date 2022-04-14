@@ -12,39 +12,6 @@ fields:
   config:
     required: false
   label: Site Link
-- name: phone_number
-  type: text
-  config:
-    required: false
-  label: Phone Number
-- name: street_address
-  type: text
-  config:
-    required: false
-  label: Street Address
-- name: locality
-  type: text
-  config:
-    required: false
-  label: Locality
-  description: The city, town, or county your business is in
-- name: state
-  type: text
-  config:
-    required: false
-  label: State
-  description: 'Put your state in a two character format ex: VA for Virginia or OK
-    for Oklahoma'
-- name: country
-  type: text
-  config:
-    required: false
-  label: Country
-- name: zip_code
-  type: text
-  config:
-    required: false
-  label: Zip Code
 - name: primary_color
   type: color
   config:
