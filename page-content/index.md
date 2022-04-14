@@ -7,6 +7,8 @@ heading: Carytown Massage is located in the heart of Richmond, VA.
 sub_heading: Request an appointment online or over the phone.
 
 ---
+Individually Owned and Operated. 
+
 We wish to provide you the most high-quality experience we can, in a safe, clean
 environment. Our licensed professionals will help you relax and integrate
 massage into a part of your preventative health routine.
