@@ -7,6 +7,6 @@ heading: Therapeutic Massage
 sub_heading: Rejuvenate your body with massage therapy.
 
 ---
-Our therapeutic massage reaches the deep layers of the targeted muscle and relaxes the body. The right therapeutic massage, paired with a peaceful setting will result in a heavenly experience. The benefits start almost instantly; the relaxing of muscles, better blood circulation, increase in oxygen levels, and the break down of knots.
+Our therapeutic massage reaches the deep layers of the targeted muscle and relaxes the body. The benefits start almost instantly; the relaxing of muscles, better blood circulation, increase in oxygen levels, and the break down of knots.
 
-A therapeutic massage is extremely healing and refreshing. Our goal is to melt away all of your muscle tension and increase blood flow.
+A therapeutic massage is extremely healing and refreshing. Our goal is to melt away all of your muscle tension and increase blood flow. 
