@@ -77,6 +77,7 @@ export default function Footer(props) {
                     flexDirection: "row",
                     flex: 1,
                     margin: 0,
+                    marginBottom: "10px",
                     gap: "6px",
                   }}
                 >
