@@ -70,6 +70,20 @@ export default function Footer(props) {
           <span className={styles.footerHeading}>Connect With Us</span>
           <ul className={styles.connectUnorderedList}>
             <li className={styles.connectListItem}>
+              <Link href="mailto:anthony@massageonmainrva.com">
+                <a
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    flex: 1,
+                    margin: 0,
+                    gap: "6px",
+                  }}
+                >
+                  <span style={{ margin: 0 }}>Anthony@massageonmainrva.com</span>
+                </a>
+
+              </Link>
               <Link href="https://www.facebook.com/massageonmainrva" passHref>
                 <a
                   style={{
