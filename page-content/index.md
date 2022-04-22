@@ -7,7 +7,7 @@ heading: Carytown Massage is located in the heart of Richmond, VA.
 sub_heading: Request an appointment online or over the phone.
 
 ---
-Individually Owned and Operated.
+Individually Owned and Operated
 
 We do not have a front desk! Please book online or by calling 804-424-2607! Online booking availability is up to date and accurate! 
 
