@@ -9,13 +9,15 @@ sub_heading: Request an appointment online or over the phone.
 ---
 Individually Owned and Operated
 
-We do not have a front desk! Please book online or by calling 804-424-2607! Online booking availability is up to date and accurate! 
+We do not have a front desk! Please book online or by calling 804-424-2607! Online booking availability is up to date and accurate!
 
-We wish to provide you with the most high-quality experience we can, in a safe, clean environment. 
+We wish to provide you with the most high-quality experience we can, in a safe, clean environment.
 
 Our licensed professional will help you relax and integrate massage into a part of your preventative health routine.
 
 Gift cards are available through the booking tab on the top right of the website. We do not offer physical gift cards at this time.
+
+Gift cards purchased prior to 2021 are not accepted at this location.
 
 We can accommodate couples massage by request but require at least one week's notice to book. Online booking is not available for this service.
 
