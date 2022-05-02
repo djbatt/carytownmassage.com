@@ -28,7 +28,7 @@ export default function Footer(props) {
       lng: -77.48456310462822,
     },
     zoom: 19,
-    apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY,
+    apiKey: "AIzaSyC2oGsK5cxT2msAL5n7VAEy9duf7cs9G2E",
   };
   const handleApiLoaded = (map, maps) => {
     const buildingCoords = [
